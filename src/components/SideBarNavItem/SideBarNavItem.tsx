@@ -21,7 +21,7 @@ const SideBarNavItem: React.FunctionComponent<SideBarNavItemProps> = ({itemImage
 
 	return (
 		<div className={"side-bar-item"} style={{width: sideBarItemWidth}}>
-            <img src={itemImage} className={"side-bar-item-image"} alt="text" width={50}/>
+            <img src={itemImage} className={"side-bar-item-image"} alt="text" width={50} style={{marginLeft: "-5px"}}/>
 			{showText ? text : null}
 		</div>
 	);

@@ -3,6 +3,9 @@ import {SplitViewProps} from "./SplitView.interfaces";
 import "./SplitView.styles.css"
 import {SideBarNav} from "../SideBarNav";
 import {MainBody} from "../MainBody";
+import ArrowButton from "../../../assets/images/ArrowButton.png"
+import {Button} from "react-bootstrap";
+import * as path from "path";
 
 const MIN_WIDTH = 70;
 const MAX_WIDTH = window.innerWidth / 2;
@@ -76,6 +79,18 @@ const SplitView: React.FunctionComponent<SplitViewProps> = () => {
 		};
 	});
 
+	const [collapseMenuButtonImage, setCollapseMenuButtonImage] = useState(String.fromCharCode(8594));
+
+	function collapseMenu() {
+		if (leftWidth > 70) {
+			setCollapseMenuButtonImage(String.fromCharCode(8594));
+			setLeftWidth(70)
+		} else {
+			setCollapseMenuButtonImage(String.fromCharCode(8592));
+			setLeftWidth(300)
+		}
+	}
+
 	return (
 		<div className={`splitView`} ref={splitPaneRef}>
 			<SideBarNav leftWidth={leftWidth} setLeftWidth={setLeftWidth} itemMaxWidth={MIN_WIDTH}>
@@ -88,6 +103,8 @@ const SplitView: React.FunctionComponent<SplitViewProps> = () => {
 				onTouchEnd={onMouseUp}
 			>
 			</div>
+			<Button onClick={collapseMenu} className={"roundButton1 rounded-pill"}
+			        style={{zIndex: "999", marginLeft: "-15px", marginTop: "5px"}}> {collapseMenuButtonImage}</Button>
 			<MainBody/>
 		</div>
 	);

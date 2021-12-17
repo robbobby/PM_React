@@ -20,8 +20,8 @@ const setItemsToRender = (currenSideBarWidth: number) => {
 	for (let i = 0; i < navBarItems.length; i++) {
 		navBarItemsRender.push(
 			<Nav.Item>
-				<Nav.Link eventKey={navBarItems[i].link}>
-					<SideBarNavItem itemImage={path.resolve(logo)} text={navBarItems[i].name} currentSideBarWidth={currenSideBarWidth}/>
+				<Nav.Link eventKey={navBarItems[i].link} style={{maxWidth: currenSideBarWidth -5, marginLeft: "5px"}}>
+					<SideBarNavItem itemImage={path.resolve(logo)} key={`nav-item-${i}`} text={navBarItems[i].name} currentSideBarWidth={currenSideBarWidth}/>
 				</Nav.Link>
 			</Nav.Item>)
 	}

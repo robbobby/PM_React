@@ -20,6 +20,12 @@
 	/*flex: 1;*/
 }
 
+.roundButton1 {
+	zIndex: 999;
+	border-radius: 100px;
+	background-color: gray;
+}
+
 .splitView {
 	height: 100%;
 	display: flex;

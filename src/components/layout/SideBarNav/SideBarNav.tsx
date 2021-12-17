@@ -23,9 +23,11 @@ const SideBarNav: React.FunctionComponent<SideBarNavProps> = ({children, leftWid
 
 	return (
 		<div className={"left-pane"} ref={leftRef}>
-			<div className={"side-bar-nav-container"} style={{maxWidth: itemMaxWidth}}>
+			<div className={"side-bar-nav-container"} >
 				<Nav fill variant="pills" defaultActiveKey="/home">
+					<span>
 					{getPopulateSideBarNavItems(leftWidth)}
+						</span>
 				</Nav>
 			</div>
 		</div>
