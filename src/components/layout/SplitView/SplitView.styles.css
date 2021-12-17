@@ -1,0 +1,33 @@
+.divider-hitbox {
+	cursor: col-resize;
+	align-self: stretch;
+	display: flex;
+	align-items: center;
+	padding: 0 0.1rem;
+	background-color: rgba(43, 43, 43);
+	border-right: 1px solid #808080;
+	height: 100vh;
+}
+
+.divider {
+	height: 100%;
+	background-color: rgba(43, 43, 43);
+	border: 1px solid #808080;
+}
+
+.rightPane {
+	margin-left: 3vh;
+	/*flex: 1;*/
+}
+
+.left-pane {
+	height: 100vh;
+	background-color: rgba(43, 43, 43);
+}
+
+.splitView {
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+}
