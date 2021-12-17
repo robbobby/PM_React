@@ -4,9 +4,17 @@ import './SideBarNavItem.styles.css'
 
 const SideBarNavItem: React.FunctionComponent<SideBarNavItemProps> = ({itemImage, text, currentSideBarWidth}) => {
 
-	let sideBarItemWidth = currentSideBarWidth -30;
+	const [sideBarItemWidth, setSideBarItemWidth] = useState(currentSideBarWidth -30);
+	const [showText, setShowText] = useState(true)
 	function setButtonVisibilityMode() {
-		sideBarItemWidth = currentSideBarWidth - 30;
+		if(currentSideBarWidth-30 < 100) {
+			setSideBarItemWidth(currentSideBarWidth + 30)
+			setShowText(false)
+		}
+		else {
+			setSideBarItemWidth(currentSideBarWidth - 30);
+			setShowText(true);
+		}
 	}
 
 	useEffect(setButtonVisibilityMode, [currentSideBarWidth])
@@ -14,7 +22,7 @@ const SideBarNavItem: React.FunctionComponent<SideBarNavItemProps> = ({itemImage
 	return (
 		<div className={"side-bar-item"} style={{width: sideBarItemWidth}}>
             <img src={itemImage} className={"side-bar-item-image"} alt="text" width={50}/>
-			{text}
+			{showText ? text : null}
 		</div>
 	);
 };

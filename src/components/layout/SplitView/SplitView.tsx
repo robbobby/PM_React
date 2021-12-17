@@ -4,7 +4,7 @@ import "./SplitView.styles.css"
 import {SideBarNav} from "../SideBarNav";
 import {MainBody} from "../MainBody";
 
-const MIN_WIDTH = 200;
+const MIN_WIDTH = 70;
 const MAX_WIDTH = window.innerWidth / 2;
 
 
