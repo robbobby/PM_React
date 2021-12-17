@@ -1,0 +1,9 @@
+.left-pane {
+	display: block;
+	/*align-items: center;*/
+	height: 100vh;
+	background-color: rgba(43, 43, 43);
+}
+
+.side-bar-nav-container {
+}

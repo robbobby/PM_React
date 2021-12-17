@@ -1,7 +1,7 @@
-.divider-hitbox {
+.split-view-drag-bar {
 	cursor: col-resize;
 	align-self: stretch;
-	display: flex;
+	/*display: flex;*/
 	align-items: center;
 	padding: 0 0.1rem;
 	background-color: rgba(43, 43, 43);
@@ -15,14 +15,9 @@
 	border: 1px solid #808080;
 }
 
-.rightPane {
+.main-body {
 	margin-left: 3vh;
 	/*flex: 1;*/
-}
-
-.left-pane {
-	height: 100vh;
-	background-color: rgba(43, 43, 43);
 }
 
 .splitView {

@@ -1,6 +1,7 @@
 interface SideBarNavOwnProps {
-	leftWidth: number | undefined;
+	leftWidth: number;
 	setLeftWidth: (value: number) => void;
+	itemMaxWidth: number;
 }
 
 export type SideBarNavProps =

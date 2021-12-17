@@ -4,8 +4,8 @@ import { FooterProps } from './Footer.interfaces';
 
 const Footer: React.FunctionComponent<FooterProps> = () => {
   return (
-    <div>
-      Footer rendered
+    <div className={"footer-layout"}>
+      &copy; BPM all rights reserved -2022
     </div>
   );
 };
