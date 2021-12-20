@@ -6,5 +6,6 @@
 	transition: width 0.1s;
 }
 
-.side-bar-nav-container {
+.side-bar-item {
+	marginLeft: 5px;
 }

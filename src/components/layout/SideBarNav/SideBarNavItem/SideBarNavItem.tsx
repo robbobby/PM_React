@@ -1,6 +1,8 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, {useEffect, useState} from 'react';
 import {SideBarNavItemProps} from './SideBarNavItem.interfaces';
 import './SideBarNavItem.styles.css'
+import 'font-awesome/css/font-awesome.min.css';
 
 const SideBarNavItem: React.FunctionComponent<SideBarNavItemProps> = ({itemImage, text, currentSideBarWidth}) => {
 
@@ -20,8 +22,14 @@ const SideBarNavItem: React.FunctionComponent<SideBarNavItemProps> = ({itemImage
 	useEffect(setButtonVisibilityMode, [currentSideBarWidth])
 
 	return (
-		<div className={"side-bar-item"} style={{width: sideBarItemWidth}}>
-            <img src={itemImage} className={"side-bar-item-image"} alt="text" width={50} style={{marginLeft: "-5px"}}/>
+		<div className={"side-bar-item-div"} style={{width: sideBarItemWidth}}>
+			<span style={{width: "50px", marginRight: "10px"}}>
+			{typeof itemImage === 'string' ?
+				<img src={itemImage} className={"side-bar-item-image"} alt="text" width={50} style={{marginLeft: "-5px"}}/>
+				:
+				<FontAwesomeIcon icon={itemImage} className={"fa-1x"} style={{ width:"50px"}}/>
+			}
+			</span>
 			{showText ? text : null}
 		</div>
 	);

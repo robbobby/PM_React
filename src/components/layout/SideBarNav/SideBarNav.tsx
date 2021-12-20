@@ -1,12 +1,9 @@
 import React, {createRef, useEffect} from 'react';
 
 import {SideBarNavProps} from './SideBarNav.interfaces';
-import {SideBarNavItem} from "../../SideBarNavItem";
-import logo from "../../../assets/images/logo.png"
-import * as path from "path";
 import {Nav} from "react-bootstrap";
 import './SideBarNav.styles.css'
-import {getPopulateSideBarNavItems} from "../../SideBarNavItem/SideBarNavItem.interfaces";
+import {getPopulateSideBarNavItems} from "./SideBarNavItem/SideBarNavItem.interfaces";
 
 const SideBarNav: React.FunctionComponent<SideBarNavProps> = ({children, leftWidth, setLeftWidth, itemMaxWidth}) => {
 	const leftRef = createRef<HTMLDivElement>();
@@ -24,7 +21,7 @@ const SideBarNav: React.FunctionComponent<SideBarNavProps> = ({children, leftWid
 	return (
 		<div className={"left-pane"} ref={leftRef}>
 			<div className={"side-bar-nav-container"} >
-				<Nav fill variant="pills" defaultActiveKey="/home">
+				<Nav fill variant="pills" defaultActiveKey="/home" className={"nav-bar"}>
 					<span>
 					{getPopulateSideBarNavItems(leftWidth)}
 						</span>

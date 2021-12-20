@@ -3,9 +3,7 @@ import {SplitViewProps} from "./SplitView.interfaces";
 import "./SplitView.styles.css"
 import {SideBarNav} from "../SideBarNav";
 import {MainBody} from "../MainBody";
-import ArrowButton from "../../../assets/images/ArrowButton.png"
 import {Button} from "react-bootstrap";
-import * as path from "path";
 
 const MIN_WIDTH = 70;
 const MAX_WIDTH = window.innerWidth / 2;
@@ -102,6 +100,7 @@ const SplitView: React.FunctionComponent<SplitViewProps> = () => {
 				onTouchStart={onTouchStart}
 				onTouchEnd={onMouseUp}
 			>
+				<div className="split-view-drag-bar-line"></div>
 			</div>
 			<Button onClick={collapseMenu} className={"roundButton1 rounded-pill"}
 			        style={{zIndex: "999", marginLeft: "-15px", marginTop: "5px"}}> {collapseMenuButtonImage}</Button>

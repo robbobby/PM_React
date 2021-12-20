@@ -1,0 +1,27 @@
+.side-bar-item-div {
+	font-size: 18px;
+	overflow: hidden;
+	text-align: left;
+	white-space: nowrap;
+}
+
+.side-bar-item-div.active {
+	background-color: black;
+	opacity: 1;
+}
+
+
+nav-link.active {
+	background-color: black;
+	opacity: 1;
+}
+
+.side-bar-item:hover {
+	background-color: grey;
+	opacity: 0.9;
+	color: white;
+}
+.active {
+	background-color: #282c34;
+	/*height: 500px;*/
+}
